@@ -47,23 +47,7 @@ public class ApplicantController {
     public ResponseEntity<List<Job>> getJobs() {
         return ResponseEntity.ok(jobService.getAllJobs());
     }
-
-//    @PostMapping("/uploadResume")
-//    public ResponseEntity<?> uploadResume(@RequestParam("file") MultipartFile file) {
-//        String email = getLoggedInUserEmail();
-//        if (email == null) {
-//            return ResponseEntity.status(401).body("Unauthorized");
-//        }
-//        Optional<User> userOpt = userService.findByEmail(email);
-//        if (userOpt.isEmpty()) {
-//            return ResponseEntity.status(404).body("User not found");
-//        }
-//        try {
-//            return ResponseEntity.ok(resumeService.uploadResume(userOpt.get().getId(), file));
-//        } catch (IOException e) {
-//            return ResponseEntity.badRequest().body("Failed to upload resume");
-//        }
-//    }
+    
 @PostMapping("/uploadResume")
 public ResponseEntity<?> uploadResume(@RequestParam("file") MultipartFile file) {
     String email = getLoggedInUserEmail();
