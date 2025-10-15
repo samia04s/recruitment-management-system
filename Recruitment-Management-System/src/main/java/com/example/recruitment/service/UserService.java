@@ -41,5 +41,4 @@ public class UserService {
 
 
 
-    // Additional login/authentication logic will use UserDetailsService integration (next steps)
 }
